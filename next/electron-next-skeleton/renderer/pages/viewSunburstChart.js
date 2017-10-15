@@ -1,13 +1,10 @@
 
-import Header from '../components/Header'
+import TopMenu from '../components/TopMenu'
 import MySunburstChart from '../components/MySunburstChartComponent'
 
 export default () => (
   <div>
-
-    <p>Hello Next!</p>
-    <p><a href="start">Home</a> </p>
-
-            <MySunburstChart/>
+    <TopMenu/>
+    <MySunburstChart/>
   </div>
 )

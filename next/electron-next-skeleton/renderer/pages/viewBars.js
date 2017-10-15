@@ -1,7 +1,11 @@
 
-import Header from '../components/Header'
+import TopMenu from '../components/TopMenu'
+
+import {Navbar, NavItem, Icon} from 'react-materialize'
 
 export default () => (
-    <Header/>
-<div></div>
+  <div>
+
+    <TopMenu/>
+</div>
 )
