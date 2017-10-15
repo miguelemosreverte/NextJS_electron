@@ -1,1 +1,0 @@
-https://stackoverflow.com/questions/26980713/solve-cross-origin-resource-sharing-with-flask
