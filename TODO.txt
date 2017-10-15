@@ -1,0 +1,4 @@
+Extend Gamba icon
+Cut Twitter icon
+
+reducir al mismo tamaño las dos fotos de inicio
