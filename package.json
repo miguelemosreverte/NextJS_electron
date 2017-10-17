@@ -18,7 +18,9 @@
     "react-materialize": ">=0.14.0",
     "json-loader": "latest",
     "personality-text-summary": "2.1.6",
-    "personality-sunburst-chart": "2.1.3"
+    "personality-sunburst-chart": "2.1.3",
+    "react-router-dom": "latest",
+    "react-icons-kit": "latest"
   },
   "devDependencies": {
     "babel": "^6.1.18",

@@ -4,6 +4,9 @@ module.exports = {
   entry: [
     './index.js'
   ],
+  devServer: {
+     historyApiFallback: true
+ },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'

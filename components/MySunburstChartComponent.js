@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {printChart} from '../static/js/JSON/printChart.js'
-
 export default class MySunburstChart extends React.Component {
   constructor(props) {
     super(props);
@@ -9,11 +7,10 @@ export default class MySunburstChart extends React.Component {
   }
   componentDidMount(){
      this.chart.focus();
-     console.log(this.chart)
      var PersonalitySunburstChart = require('personality-sunburst-chart');
      var chart = new PersonalitySunburstChart({
        'element': this.chart,
-       'version': 'v3'
+       'version': 'v2'
      });
      chart.show(this.props.json, '../static/images/GAMBA-FM-LOGO-BLACK.jpg');
   }

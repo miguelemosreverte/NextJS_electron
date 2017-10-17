@@ -1,86 +1,109 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {Slide, Slider, Collapsible, CollapsibleItem, Tabs, Tab, Parallax} from 'react-materialize';
-import MySunburstChart from './components/MySunburstChartComponent'
-import MySummary from './components/MySummaryComponent'
 
-import GambaProfile from './data/RadioGambaProfile.json';
-import GambaUsers from './data/RadioGambaUsers.json';
+import MainGrid from './components/Grid/MainGrid'
+import ParallaxPresentation from './components/Grid/ParallaxPresentation'
+import MyFooterComponent from './components/MyFooterComponent'
 
+import { BrowserRouter } from 'react-router-dom'
+import { Link, Switch, Route, NavLink } from 'react-router-dom'
+
+import { Button } from 'react-materialize'
 
 
 const App = ({name}) =>
-<div>
-  <Tabs className='tab-demo z-depth-1'>
+
+  <div>
+
+  <Switch>
+    <Route path='/MainGrid' component={MainGrid}/>
+    <Route path='/ParallaxPresentation' component={ParallaxPresentation}/>
+  </Switch>
 
 
 
-
-    		<Tab title="Inicio">
-        <div>
-        	<Parallax imageSrc="../static/images/maxresdefault-2.jpg"/>
-        	<div className="section white">
-        		<div className="row container">
-        			<h2 className="header">IBM Watson</h2>
-        			<p className="grey-text text-darken-3 lighten-3">Análisis psicológico de comunidades de Twitter</p>
-        		</div>
-        	</div>
-        	<Parallax imageSrc="../static/images/twitter2.png"/>
-        </div>
-
-        </Tab>
-
-
-  		<Tab title="Usuarios Gamba">
-
-        <Slider>
-        	<Slide
-        		src="http://lorempixel.com/580/250/nature/1"
-        		title="This is our big Tagline!">
-        		slogan
-        	</Slide>
-        	<Slide
-        		src="http://lorempixel.com/580/250/nature/2"
-        		title="Left aligned Caption"
-        		placement="left">
-        		slogan
-        	</Slide>
-        	<Slide
-        		src="http://lorempixel.com/580/250/nature/3"
-        		title="Right aligned Caption"
-        		placement="right">
-        		slogan
-        	</Slide>
-        </Slider>
-
-      </Tab>
+      <Button
+        floating
+        fab='vertical'
+        className='red'
+        waves='light'
+        href='/MainGrid'
+        icon='>'
+        style={{right: "90px"}}>
 
 
 
+        <Link waves='light' floating large className='btn' to="/ParallaxPresentation"
+        style={{position: "relative",
+              right: "90px",
+              top: "50px"}}>
+              Presentation
+        </Link>
+
+        <Link waves='light' floating large className='btn' to="/MainGrid"
+        style={{position: "relative",
+              right: "90px",
+              top: "50px"}}>
+              Dashboard
+        </Link>
+
+      </Button>
 
 
-  		<Tab title="Personalidad colectiva">
 
-              <MySummary json={GambaProfile}  />
-
-      </Tab>
+    <MyFooterComponent />
 
 
-  		<Tab title="Gráfico de personalidad">
-
-        <MySunburstChart json={GambaProfile}  />
-
-      </Tab>
-
-
-
-  </Tabs>
-</div>;
-
+  </div>
 
 
 
 ReactDOM.render(
-  <App />, document.querySelector('.react-root')
+
+  <BrowserRouter >
+    <App />
+  </BrowserRouter>, document.querySelector('.react-root')
 );
+
+/*
+
+    <Button
+
+      className='red'
+      style={{bottom: '45px', width: '100%'}}
+      waves='light'
+      node='a'
+      href='/MainGrid'> CONTINUE </Button>
+*/
+
+
+/*
+
+
+    <Button
+      node='a'
+      floating
+      fab='vertical'
+      large
+      className='red'
+      waves='light'
+      href='MyGrid'
+      icon='>'
+    />
+*/
+
+/*
+<SideNav
+  trigger={<Button>Tour</Button>}
+  options={{ closeOnClick: true }}
+  >
+
+  <SideNavItem subheader>Subheader</SideNavItem>
+  <SideNavItem waves href='#!third'>Third Link With Waves</SideNavItem>
+  <SideNavItem divider />
+  <SideNavItem subheader>Subheader</SideNavItem>
+  <SideNavItem waves href='#!third'>Third Link With Waves</SideNavItem>
+</SideNav>
+
+*/
