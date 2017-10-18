@@ -16,14 +16,24 @@ export default class MySunburstChart extends React.Component {
   }
 
   render() {
+            var height= "500px";
+            if (this.props.small) {
+              height="100px"
+            }
             return (
                       <div className="container">
                         <div className="row">
                           <div className="col-sm-6 col-xs-12">
-                            <div ref={(input) => { this.chart = input; }} />
+
+                            <div style={{"height":height}} ref={(input) => { this.chart = input; }} />
                           </div>
                         </div>
                       </div>
             );
   }
+
+}
+
+MySunburstChart.propTypes ={
+    small: React.PropTypes.bool
 }

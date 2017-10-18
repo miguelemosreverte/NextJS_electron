@@ -20,26 +20,28 @@ export default class MyCard extends React.Component {
 
   render() {
             return (
-              <Card>
-                  <this.props.type json={this.props.json} fontSize="12px"/>
 
-                  <Button waves='light' className='red'>
-                    <Icon size={32} icon={ic_file_download} style={{ color: 'green' }}/>
+              <Card>
+                  <this.props.type json={this.props.json} fontSize="5px" small/>
+
+                  <Button waves='light' className='white'>
+                    <Icon size={32} icon={ic_file_download} style={{ color: 'purple' }}/>
                   </Button>
 
 
                   <Button waves='light'  className='white'>
-                    <Icon size={32} icon={ic_refresh} style={{ color: 'green' }}/>
+                    <Icon size={32} icon={ic_refresh} style={{ color: 'purple' }}/>
                   </Button>
 
 
                   <Modal
+                  style={{"width":"1200px", "height":"1200px"}}
                   trigger={
                         <Button waves='light'  className='white'>
-                          <Icon size={32} icon={ic_fullscreen} style={{ color: 'green' }}/>
+                          <Icon size={32} icon={ic_fullscreen} style={{ color: 'purple' }}/>
                         </Button>}>
 
-                        <this.props.type json={this.props.json} fontSize="20px"/>
+                        <this.props.type json={this.props.json} fontSize="20px" />
 
                 </Modal>
             </Card>

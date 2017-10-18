@@ -20,7 +20,8 @@
     "personality-text-summary": "2.1.6",
     "personality-sunburst-chart": "2.1.3",
     "react-router-dom": "latest",
-    "react-icons-kit": "latest"
+    "react-icons-kit": "latest",
+    "nuka-carousel": "latest"
   },
   "devDependencies": {
     "babel": "^6.1.18",

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 
 import MainGrid from './components/Grid/MainGrid'
-import ParallaxPresentation from './components/Grid/ParallaxPresentation'
+import ParallaxPresentation from './components/ParallaxPresentation'
 import MyFooterComponent from './components/MyFooterComponent'
 
 import { BrowserRouter } from 'react-router-dom'
@@ -26,7 +26,7 @@ const App = ({name}) =>
       <Button
         floating
         fab='vertical'
-        className='red'
+        className='green darken-4'
         waves='light'
         href='/MainGrid'
         icon='>'
@@ -34,14 +34,14 @@ const App = ({name}) =>
 
 
 
-        <Link waves='light' floating large className='btn' to="/ParallaxPresentation"
+        <Link waves='light' floating large className='btn  indigo darken-3' to="/ParallaxPresentation"
         style={{position: "relative",
               right: "90px",
               top: "50px"}}>
               Presentation
         </Link>
 
-        <Link waves='light' floating large className='btn' to="/MainGrid"
+        <Link waves='light' floating large className='btn grey darken-4' to="/MainGrid"
         style={{position: "relative",
               right: "90px",
               top: "50px"}}>
